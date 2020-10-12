@@ -37,5 +37,3 @@ class Librero:
     def agregarComic(self, comic):
         print("Comic")
         self.librerito.append(comic)
-
-# Manga
