@@ -2,12 +2,15 @@ from abc import ABCMeta, abstractstaticmethod
 
 
 class IChair(metaclass=ABCMeta):  # pylint: disable=too-few-public-methods
+    """The Chair Interface"""
 
     @abstractstaticmethod
     def dimensions():
+        """A static inteface method"""
 
 
 class BigChair(IChair):  # pylint: disable=too-few-public-methods
+    """The Big Chair Concrete Class which implements the IChair interface"""
 
     def __init__(self):
         self._height = 80
@@ -19,6 +22,7 @@ class BigChair(IChair):  # pylint: disable=too-few-public-methods
 
 
 class MediumChair(IChair):  # pylint: disable=too-few-public-methods
+    """The Medium Chair Concrete Class which implements the IChair interface"""
 
     def __init__(self):
         self._height = 60
@@ -30,6 +34,7 @@ class MediumChair(IChair):  # pylint: disable=too-few-public-methods
 
 
 class SmallChair(IChair):  # pylint: disable=too-few-public-methods
+    """The Small Chair Concrete Class which implements the IChair interface"""
 
     def __init__(self):
         self._height = 40
@@ -41,6 +46,7 @@ class SmallChair(IChair):  # pylint: disable=too-few-public-methods
 
 
 class ChairFactory:  # pylint: disable=too-few-public-methods
+    """Tha Factory Class"""
 
     @staticmethod
     def get_chair(chair):
